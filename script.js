@@ -48,14 +48,14 @@ function chargerTaches() {
 function afficherCategories(categories) {
   categorieDropdown.innerHTML = ''
   filterCategoryDropdown.innerHTML = ''
-  deleteCategoryDropdown.innerHTML = '' // Ajoutez cette ligne
+  deleteCategoryDropdown.innerHTML = ''
 
   const defaultOption = document.createElement('option')
   defaultOption.value = ''
   defaultOption.innerText = 'Aucune catégorie'
   filterCategoryDropdown.appendChild(defaultOption.cloneNode(true))
   categorieDropdown.appendChild(defaultOption)
-  deleteCategoryDropdown.appendChild(defaultOption.cloneNode(true)) // Ajoutez cette ligne
+  deleteCategoryDropdown.appendChild(defaultOption.cloneNode(true))
 
   categories.forEach((categorie, index) => {
     const option = document.createElement('option')
@@ -63,7 +63,7 @@ function afficherCategories(categories) {
     option.innerText = categorie
     filterCategoryDropdown.appendChild(option.cloneNode(true))
     categorieDropdown.appendChild(option)
-    deleteCategoryDropdown.appendChild(option.cloneNode(true)) // Ajoutez cette ligne
+    deleteCategoryDropdown.appendChild(option.cloneNode(true))
   })
 }
 
@@ -132,18 +132,18 @@ function afficherTache(tache, index) {
  * Sauvegarde les catégories et les tâches mises à jour, puis affiche les listes mises à jour.
  */
 function supprimerCategorie() {
-  const categorieASupprimer = document.getElementById('deleteCategoryDropdown').value; // Utilisez 'deleteCategoryDropdown' ici
+  const categorieASupprimer = document.getElementById('deleteCategoryDropdown').value
 
   if (categorieASupprimer) {
     // Supprimer la catégorie
-    categories = categories.filter(categorie => categorie !== categorieASupprimer);
-    sauvegarderCategories(categories);
-    afficherCategories(categories);
+    categories = categories.filter(categorie => categorie !== categorieASupprimer)
+    sauvegarderCategories(categories)
+    afficherCategories(categories)
 
     // Supprimer les tâches associées à la catégorie
-    taches = taches.filter(tache => tache.categorie !== categorieASupprimer);
-    sauvegarderTaches(taches);
-    afficherTaches(taches);
+    taches = taches.filter(tache => tache.categorie !== categorieASupprimer)
+    sauvegarderTaches(taches)
+    afficherTaches(taches)
   }
 }
 
