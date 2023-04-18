@@ -1,0 +1,89 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --couleur-principale: #ecf0f1;
+    --couleur-secondaire: #f1c40f;
+    --couleur-texte: #333;
+    --couleur-arriere-plan: #111226;
+    --couleur-erreur: #e74c3c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--couleur-arriere-plan);
+    color: var(--couleur-texte);
+}
+
+.container {
+    max-width: 900px;
+}
+
+h1 {
+    font-size: 2rem;
+    color: var(--couleur-principale);
+}
+
+button {
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}
+
+.input-group {
+    position: relative;
+}
+
+.form-control {
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    border: 1px solid var(--couleur-texte);
+}
+
+.form-select {
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    border: 1px solid var(--couleur-texte);
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    font-weight: bold;
+    border-radius: 0.25rem;
+}
+
+.btn-primary {
+    background-color: var(--couleur-principale);
+    color: var(--couleur-arriere-plan);
+}
+
+.btn-primary:hover {
+    background-color: #bdc3c7;
+}
+
+.btn-secondary {
+    background-color: var(--couleur-secondaire);
+    color: var(--couleur-arriere-plan);
+}
+
+.btn-secondary:hover {
+    background-color: #f39c12;
+}
+
+.btn-danger {
+    background-color: var(--couleur-erreur);
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #c0392b;
+}

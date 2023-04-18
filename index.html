@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="text-center mb-4">Todo List</h1>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" id="searchInput" placeholder="Rechercher">
+            <select class="form-select" id="filterCategoryDropdown"></select>
+        </div>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" id="categoryInput" placeholder="Nouvelle catégorie">
+            <button class="btn btn-secondary" id="addCategory">Ajouter catégorie</button>
+        </div>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" id="taskInput" placeholder="Nouvelle tâche">
+            <select class="form-select" id="categoryDropdown"></select>
+            <button type="button" class="btn btn-primary" id="addTask">Ajouter tâche</button>
+        </div>
+        <div class="d-flex justify-content-end mb-3">
+            <div class="input-group" style="max-width: 400px;">
+                <select class="form-select" id="deleteCategoryDropdown"></select>
+                <button type="button" class="btn btn-danger" id="deleteCategory">Supprimer catégorie</button>
+            </div>
+        </div>
+        <div id="taskList"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
